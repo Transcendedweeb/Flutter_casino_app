@@ -387,7 +387,7 @@ class _AccountPageState extends State<AccountPage> {
                         const SizedBox(height: 10),
                         Text('Email: $_email'),
                         const SizedBox(height: 10),
-                        Text('Balance: \$$_balance'),
+                        Text('Balance: €$_balance'),
                       ],
                     ),
                   ),
