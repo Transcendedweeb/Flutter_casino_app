@@ -216,18 +216,21 @@ class _SlotsState extends State<Slots> {
                       padding: const EdgeInsets.all(8.0),
                       child: Column(
                         children: [
-                          for (int i = 0; i < 3; i++)
+                          for (int horReels = 0; horReels < 3; horReels++)
                             Container(
                               margin: const EdgeInsets.symmetric(vertical: 8),
                               child: Row(
                                 mainAxisAlignment:
                                     MainAxisAlignment.spaceEvenly,
                                 children: [
-                                  for (int j = 0; j < 3; j++)
+                                  for (int vertReels = 0;
+                                      vertReels < 3;
+                                      vertReels++)
                                     Flexible(
                                       child: SlotReel(
-                                        symbols: reels[i],
-                                        selectedIndex: selectedIndexes[i][j],
+                                        symbols: reels[horReels],
+                                        selectedIndex: selectedIndexes[horReels]
+                                            [vertReels],
                                       ),
                                     ),
                                 ],
