@@ -161,8 +161,12 @@ class _SlotsState extends State<Slots> {
       selectedIndexes[2][1] = Random().nextInt(reels[2].length);
       selectedIndexes[2][2] = Random().nextInt(reels[2].length);
 
-      if (selectedIndexes[1][0] == selectedIndexes[1][1] &&
-          selectedIndexes[1][1] == selectedIndexes[1][2]) {
+      if (selectedIndexes[0][0] == selectedIndexes[0][1] &&
+              selectedIndexes[0][1] == selectedIndexes[0][2] ||
+          selectedIndexes[1][0] == selectedIndexes[1][1] &&
+              selectedIndexes[1][1] == selectedIndexes[1][2] ||
+          selectedIndexes[2][0] == selectedIndexes[2][1] &&
+              selectedIndexes[2][1] == selectedIndexes[2][2]) {
         accountBalance += betAmount * 20;
         showSnackBar('You won! +€${betAmount * 20}');
       } else {
